@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>单月份</title>
+    <!-- 引入 lib/echarts.custom.min.js -->
+    <script src="echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script>
+		var myChart = echarts.init(document.getElementById('main'));
+        
+        option = {
+			title: {
+				text: '保定市2019年01月空气质量数据'
+			},
+			tooltip: {
+				trigger: 'axis'
+			},
+			legend: {
+				data:['EM预测数据']
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			toolbox: {
+				feature: {
+					saveAsImage: {}
+				}
+			},
+			xAxis: {
+				type: 'category',
+				boundaryGap: false,
+				data: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31']
+			},
+			yAxis: {
+				type: 'value'
+			},
+			series: [
+				{
+					name:'AQI',
+					type:'line',
+					data:[144,248,240,156,129,186,225,176,118,212,315,431,304,367,66,103,162,217,78,90,74,127,104,99,88,147,202,198,214,143,56]
+				}
+			]
+		};
+
+		myChart.setOption(option);
+    </script>
+</body>
+</html>

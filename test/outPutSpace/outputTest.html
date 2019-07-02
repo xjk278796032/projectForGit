@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>北京</title>
+    <!-- 引入 lib/echarts.custom.min.js -->
+    <script src="echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script>
+        // 绘制图表。
+        echarts.init(document.getElementById('main')).setOption({
+            series: {
+                type: 'pie',
+                data: [
+					{name:'严重污染-16',value: 16 },
+					{name:'中度污染-128',value: 128 },
+					{name:'优-225',value: 225 },
+					{name:'无-5',value: 5 },
+					{name:'良-465',value: 465 },
+					{name:'轻度污染-253',value: 253 },
+					{name:'重度污染-62',value: 62 },
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
